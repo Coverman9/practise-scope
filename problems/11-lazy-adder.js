@@ -22,7 +22,8 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-// Your code here
+let lazyAdder = first => second => third => first + second + third
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
