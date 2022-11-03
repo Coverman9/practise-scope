@@ -14,6 +14,37 @@ function returned by recVolume should continue to return the original volume.
 ***********************************************************************/
 
 // Your code here
+let recVolume = (height) => {
+  let arr = [];
+  let sum = 1;
+  arr.push(height);
+  return function volume(width) {
+    arr.push(width);
+    console.log(arr);
+    if (arr.length === 3) {
+      for (let i = 0; i < arr.length; i++) {
+        sum *= arr[i];
+      }
+    }
+    // } else {
+    //   return function volume(height) {
+    //     arr.push(height);
+    //   };
+    // }
+
+    // return function volume(length) {
+    //   arr.push(length);
+    //   let sum = 1;
+
+    //   return sum;
+    // };
+    return sum;
+  };
+};
+
+let table1 = recVolume(5);
+table1(4);
+console.log(table1(3)); //should be 60
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
