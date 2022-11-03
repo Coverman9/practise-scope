@@ -15,7 +15,10 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 ***********************************************************************/
 
 // Your code here
-
+let arrowGetFullName = person => {
+  let name = Object.values(person)
+  return name[0] + " " + name[1]
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
