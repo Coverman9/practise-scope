@@ -14,33 +14,24 @@ function returned by recVolume should continue to return the original volume.
 ***********************************************************************/
 
 // Your code here
-let recVolume = (height) => {
-  let arr = [];
-  let sum = 1;
-  arr.push(height);
-  return function volume(width) {
-    arr.push(width);
-    console.log(arr);
-    if (arr.length === 3) {
-      for (let i = 0; i < arr.length; i++) {
-        sum *= arr[i];
-      }
+const recVolume = (height) => {
+  let dimensions = [height];
+  const anything = (num) => {
+    if (dimensions.length < 3) {
+      dimensions.push(num);
     }
-    // } else {
-    //   return function volume(height) {
-    //     arr.push(height);
-    //   };
-    // }
-
-    // return function volume(length) {
-    //   arr.push(length);
-    //   let sum = 1;
-
-    //   return sum;
-    // };
-    return sum;
-  };
-};
+    if (dimensions.length === 3) {
+      let product = 1;
+      for (let i = 0; i < dimensions.length; i++) {
+        product *= dimensions[i];
+      }
+      return product;
+    } else {
+      return anything;
+    }
+  }
+  return anything;
+}
 
 let table1 = recVolume(5);
 table1(4);

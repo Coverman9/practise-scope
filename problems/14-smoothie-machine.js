@@ -22,7 +22,20 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// Your code here
+let smoothieMachine = () => {
+  let str = "I'm having a smoothie with ";
+  return function (...item) {
+    if (item.length === 1) {
+      str += item;
+    } else if(item.length > 1 ){
+      str += " and " + item
+    } else {
+      str += " and " + item
+    }
+
+    return str;
+  };
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
